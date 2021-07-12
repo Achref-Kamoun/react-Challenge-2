@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Style from'./style.css';
+import Navbar from './Navbar.js'
+import About from './About.js'
+import Projet from './Project.js'
+import Form from './Form.js'
+import Footer from './Footer.js'
 function App() {
+  const Pro = [{ img:"/proj1.jpg",title:'Project 1',desc:`Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  Voluptatibus ex natus quis beatae perspiciatis repellat laudantium
+  aliquam.`,link : "Github Link"},{ img:"/proj2.jpg",title:'Project 1',desc:`Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  Voluptatibus ex natus quis beatae perspiciatis repellat laudantium
+  aliquam.`,link : "Github Link"},{ img:"/proj3.jpg",title:'Project 1',desc:`Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  Voluptatibus ex natus quis beatae perspiciatis repellat laudantium
+  aliquam.`,link : "Github Link"},{ img:"/proj4.jpg",title:'Project 1',desc:`Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  Voluptatibus ex natus quis beatae perspiciatis repellat laudantium
+  aliquam.`,link : "Github Link"}
+
+]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Navbar/>
+    <About name = "John doe"  img = '/John-Doe.jpg' />
+    <Projet Pro={Pro} />
+    <Form/>
+    <Footer p= 'Copyritghts &copy; GOMYCODE 2021'/>
     </div>
   );
 }
